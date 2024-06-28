@@ -7,7 +7,7 @@
 #
 Name     : fastfetch
 Version  : 2.16.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.16.0/fastfetch-2.16.0.tar.gz
 Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.16.0/fastfetch-2.16.0.tar.gz
 Summary  : No detailed summary available
@@ -17,9 +17,34 @@ Requires: fastfetch-bin = %{version}-%{release}
 Requires: fastfetch-data = %{version}-%{release}
 Requires: fastfetch-license = %{version}-%{release}
 Requires: fastfetch-man = %{version}-%{release}
+BuildRequires : Vulkan-Headers-dev
 BuildRequires : buildreq-cmake
 BuildRequires : glibc-dev
 BuildRequires : pkg-config
+BuildRequires : pkgconfig(DirectX-Headers)
+BuildRequires : pkgconfig(ImageMagick)
+BuildRequires : pkgconfig(OpenCL)
+BuildRequires : pkgconfig(chafa)
+BuildRequires : pkgconfig(dbus-1)
+BuildRequires : pkgconfig(dconf)
+BuildRequires : pkgconfig(ddcutil)
+BuildRequires : pkgconfig(dri)
+BuildRequires : pkgconfig(gbm)
+BuildRequires : pkgconfig(gio-unix-2.0)
+BuildRequires : pkgconfig(libdrm)
+BuildRequires : pkgconfig(libnm)
+BuildRequires : pkgconfig(libpulse)
+BuildRequires : pkgconfig(libxfconf-0)
+BuildRequires : pkgconfig(osmesa)
+BuildRequires : pkgconfig(rpm)
+BuildRequires : pkgconfig(sqlite3)
+BuildRequires : pkgconfig(vulkan)
+BuildRequires : pkgconfig(wayland-client)
+BuildRequires : pkgconfig(x11)
+BuildRequires : pkgconfig(xcb)
+BuildRequires : pkgconfig(xcb-randr)
+BuildRequires : pkgconfig(xrandr)
+BuildRequires : pkgconfig(zlib)
 BuildRequires : python3
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -81,7 +106,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1719614493
+export SOURCE_DATE_EPOCH=1719614851
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -125,7 +150,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1719614493
+export SOURCE_DATE_EPOCH=1719614851
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fastfetch
 cp %{_builddir}/fastfetch-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/fastfetch/7fda743c8dc7a97fac8510636baad2197decf863 || :

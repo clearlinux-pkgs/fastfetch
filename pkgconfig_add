@@ -1,2 +1,26 @@
 # This file contains additional pkgconfig build requirements that did
 # not get picked up automatically. One name per line, no whitespace.
+DirectX-Headers
+ImageMagick
+OpenCL
+chafa
+dbus-1
+dconf
+ddcutil
+dri
+gbm
+gio-unix-2.0
+libdrm
+libnm
+libpulse
+libxfconf-0
+osmesa
+rpm
+sqlite3
+vulkan
+wayland-client
+x11
+xcb
+xcb-randr
+xrandr
+zlib
