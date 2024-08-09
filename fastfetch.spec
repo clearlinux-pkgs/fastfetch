@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : fastfetch
-Version  : 2.21.0
-Release  : 7
-URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.21.0/fastfetch-2.21.0.tar.gz
-Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.21.0/fastfetch-2.21.0.tar.gz
+Version  : 2.21.1
+Release  : 8
+URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.21.1/fastfetch-2.21.1.tar.gz
+Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.21.1/fastfetch-2.21.1.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -98,15 +98,15 @@ man components for the fastfetch package.
 
 
 %prep
-%setup -q -n fastfetch-2.21.0
-cd %{_builddir}/fastfetch-2.21.0
+%setup -q -n fastfetch-2.21.1
+cd %{_builddir}/fastfetch-2.21.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1722870351
+export SOURCE_DATE_EPOCH=1723212265
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -150,7 +150,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1722870351
+export SOURCE_DATE_EPOCH=1723212265
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fastfetch
 cp %{_builddir}/fastfetch-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/fastfetch/ed9c8efe6c67cf1f74819436927814a0b31b8ef7 || :
@@ -188,6 +188,7 @@ popd
 /usr/share/fastfetch/presets/examples/20.jsonc
 /usr/share/fastfetch/presets/examples/21.jsonc
 /usr/share/fastfetch/presets/examples/22.jsonc
+/usr/share/fastfetch/presets/examples/23.jsonc
 /usr/share/fastfetch/presets/examples/3.jsonc
 /usr/share/fastfetch/presets/examples/4.jsonc
 /usr/share/fastfetch/presets/examples/5.jsonc
