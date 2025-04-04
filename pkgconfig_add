@@ -14,7 +14,6 @@ libdrm
 libnm
 libpulse
 libxfconf-0
-osmesa
 rpm
 sqlite3
 vulkan
