@@ -1,0 +1,1 @@
+Compiler:  ‘propertyData.ffXGetWindowProperty’ may be used uninitialized [-Werror=maybe-uninitialized]
