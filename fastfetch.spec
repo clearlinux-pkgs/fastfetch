@@ -6,10 +6,10 @@
 # autospec commit: a88ffdc
 #
 Name     : fastfetch
-Version  : 2.40.4
-Release  : 22
-URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.40.4/fastfetch-2.40.4.tar.gz
-Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.40.4/fastfetch-2.40.4.tar.gz
+Version  : 2.41.0
+Release  : 23
+URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.41.0/fastfetch-2.41.0.tar.gz
+Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.41.0/fastfetch-2.41.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -98,8 +98,8 @@ man components for the fastfetch package.
 
 
 %prep
-%setup -q -n fastfetch-2.40.4
-cd %{_builddir}/fastfetch-2.40.4
+%setup -q -n fastfetch-2.41.0
+cd %{_builddir}/fastfetch-2.41.0
 %patch -P 1 -p1
 
 %build
@@ -107,7 +107,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1744205870
+export SOURCE_DATE_EPOCH=1744813466
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -151,7 +151,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1744205870
+export SOURCE_DATE_EPOCH=1744813466
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fastfetch
 cp %{_builddir}/fastfetch-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/fastfetch/504ae60d5617bf04284b5ea8b349a311a3516c08 || :
