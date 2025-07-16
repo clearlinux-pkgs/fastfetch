@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : fastfetch
-Version  : 2.47.0
-Release  : 29
-URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.47.0/fastfetch-2.47.0.tar.gz
-Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.47.0/fastfetch-2.47.0.tar.gz
+Version  : 2.48.0
+Release  : 30
+URL      : https://github.com/fastfetch-cli/fastfetch/archive/2.48.0/fastfetch-2.48.0.tar.gz
+Source0  : https://github.com/fastfetch-cli/fastfetch/archive/2.48.0/fastfetch-2.48.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -62,6 +62,7 @@ Patch1: nowerror.patch
 [![GitHub release (with filter)](https://img.shields.io/github/v/release/fastfetch-cli/fastfetch?logo=github)](https://github.com/fastfetch-cli/fastfetch/releases)
 [![latest packaged version(s)](https://repology.org/badge/latest-versions/fastfetch.svg)](https://repology.org/project/fastfetch/versions)
 [![Packaging status](https://repology.org/badge/tiny-repos/fastfetch.svg)](https://repology.org/project/fastfetch/versions)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/fastfetch-cli/fastfetch)
 
 %package bin
 Summary: bin components for the fastfetch package.
@@ -98,8 +99,8 @@ man components for the fastfetch package.
 
 
 %prep
-%setup -q -n fastfetch-2.47.0
-cd %{_builddir}/fastfetch-2.47.0
+%setup -q -n fastfetch-2.48.0
+cd %{_builddir}/fastfetch-2.48.0
 %patch -P 1 -p1
 
 %build
@@ -107,7 +108,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1751550184
+export SOURCE_DATE_EPOCH=1752667413
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -151,7 +152,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1751550184
+export SOURCE_DATE_EPOCH=1752667413
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fastfetch
 cp %{_builddir}/fastfetch-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/fastfetch/504ae60d5617bf04284b5ea8b349a311a3516c08 || :
@@ -193,6 +194,7 @@ popd
 /usr/share/fastfetch/presets/examples/24.jsonc
 /usr/share/fastfetch/presets/examples/25.jsonc
 /usr/share/fastfetch/presets/examples/26.jsonc
+/usr/share/fastfetch/presets/examples/27.jsonc
 /usr/share/fastfetch/presets/examples/3.jsonc
 /usr/share/fastfetch/presets/examples/4.jsonc
 /usr/share/fastfetch/presets/examples/5.jsonc
